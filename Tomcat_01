@@ -1,0 +1,23 @@
+JAVA
+
+yum list java*jdk-devel
+
+yum install java-1.8.0-openjdk-devel.x86_64
+
+[root@localhost ~]# javac -version
+javac 1.8.0_161
+
+[root@localhost ~]# which java
+/usr/bin/java
+[root@localhost ~]# readlink -f /usr/bin/java
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64/bin/java
+
+
+JAVA_HOME 설정(일)
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64
+
+
+
+참고 URL
+https://blog.hanumoka.net/2018/04/30/centOs-20180430-centos-install-jdk/
