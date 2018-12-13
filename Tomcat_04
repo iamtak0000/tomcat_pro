@@ -29,7 +29,10 @@ $ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
      BalancerMember http://127.0.0.1:8081 
   </Proxy>
   
-  ProxyPreserveHost On 
+  ProxyPreserveHost On
+ 
+  # examples는 넘기지 않는다. 톰캣에서 examples 클릭....
+  ProxyPass /examples ! 
   ProxyPass / balancer://mycluster/
   ProxyPassReverse / balancer://mycluster/ 
 </VirtualHost>
