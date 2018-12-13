@@ -28,4 +28,5 @@ export JAVA_OPTS="$JAVA_OPTS -Xmx1024m -Xms1024"
 $ chmod +x jstart.sh
 $ ./jstart.sh
 
-
+## 설정 적용 확인
+$ ps -ef | grep java
