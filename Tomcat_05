@@ -51,13 +51,13 @@ $ vi /home/apache/apache2/conf/workers.lb.properties
 worker.list=tomcat1, tomcat2, trust_loadballance
 
 worker.list=tomcat1
-worker.tomcat1.port=8009 
+worker.tomcat1.port=8109 
 worker.tomcat1.host=localhost 
 worker.tomcat1.type=ajp13 
 worker.tomcat1.lbfactor=1
 
 worker.list=tomcat2
-worker.tomcat2.port=18009 
+worker.tomcat2.port=8209 
 worker.tomcat2.host=localhost 
 worker.tomcat2.type=ajp13 
 worker.tomcat2.lbfactor=1
