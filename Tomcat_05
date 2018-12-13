@@ -69,6 +69,13 @@ worker.trust_loadballance.balance_workers=tomcat1,tomcat2
 $ vi /home/apache/apache2/conf/httpd.conf
 JkWorkersFile conf/workers.lb.properties 
 
+$ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
+<VirtualHost *:80>     
+  ServerName localhost   
+  JkMount /* trust_loadballance
+</VirtualHost>
+
+
 ## 톰캣 수정(server.xml)
 
 ## tomcat1 "jvmRoute="tomcat1"을 추가해 주세요"
