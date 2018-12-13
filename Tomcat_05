@@ -1,4 +1,18 @@
 ## mod_jk 연동
+
+## 모듈 컴파일
+$ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.46-src.tar.gz
+$ tar -xvzf tomcat-connectors-1.2.46-src.tar.gz
+$ cd tomcat-connectors-1.2.46-src/native
+$ ./configure --with-apxs=/home/apache/apache24/bin/apxs
+$ make && make install
+
+## 모듈 확인
+$ home/apache/apache2/modules/
+** 경로에서 mod_jk.so 파일이 확인한다.
+
+
+## 모듈 설정
 $ vi /home/apache/apache2/conf/httpd.conf
 
 LoadModule jk_module modules/mod_jk.so
