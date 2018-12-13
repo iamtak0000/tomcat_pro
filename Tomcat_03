@@ -24,3 +24,8 @@ export JAVA_OPTS="$JAVA_OPTS -Xmx1024m -Xms1024"
 
 ## Collector Default : Parallel Garbage Collector
 
+
+$ chmod +x jstart.sh
+$ ./jstart.sh
+
+
