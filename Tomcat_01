@@ -21,10 +21,12 @@ $ passwd tomcat
 
 $ su - tomcat
 
-JAVA_HOME 설정(일)
+## JAVA_HOME 설정
+$ vi .bash_profile
 
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64
 
+$ source ~/.bash_profile
 
 
 참고 URL
