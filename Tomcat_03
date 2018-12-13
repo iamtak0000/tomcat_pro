@@ -25,6 +25,13 @@ export JAVA_OPTS="$JAVA_OPTS -Xmx1024m -Xms1024m"
 
 ## Collector Default : Parallel Garbage Collector
 
+## Garbage Collection
+export JAVA_OPTS="$JAVA_OPTS -verbose:gc -Xloggc:$CATALINA_BASE/logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps"
+
+## OOM
+export JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$CATALINA_BASE/logs"
+
+
 ./startup.sh
 --------------------------------------------------------------
 
