@@ -62,7 +62,7 @@ worker.tomcat2.host=localhost
 worker.tomcat2.type=ajp13 
 worker.tomcat2.lbfactor=1
 
-worker.trust_loadballance.type=lbworker.trust_loadballance.balanced_workers=tomcat1,tomcat2
+worker.trust_loadballance.type=lbworker.trust_loadballance.balance_workers=tomcat1,tomcat2
 =====================================================
 
 $ vi /home/apache/apache2/conf/httpd.conf
