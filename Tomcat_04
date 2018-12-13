@@ -1,0 +1,20 @@
+## 아파치와 톰캣 연동
+
+$ vi /home/apache/apache2/conf/httpd.conf
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+
+# Virtual hosts
+Include conf/extra/httpd-vhosts.conf
+
+$ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
+
+<VirtualHost *:80>
+  ProxyPreserveHost On
+  ProxyPass / http://172.20.10.11:8180/
+  ProxyPassReverse / http://172.20.10.11:8180/
+</VirtualHost>
+
+$ /home/apache/apache2/bin/apachectl -k restart
+
+$ curl http://172.20.10.11/
