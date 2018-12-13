@@ -1,0 +1,31 @@
+## mod_jk 연동
+$ vi /home/apache/apache2/conf/httpd.conf
+
+LoadModule jk_module modules/mod_jk.so
+
+<IfModule mod_jk.c>     
+  # 워커 설정파일 위치     
+  JkWorkersFile conf/workers.properties
+  JkShmFile logs/mod_jk.shm
+  # log 위치     
+  JkLogFile logs/mod_jk.log
+  # 로그레벨 설정     
+  JkLogLevel info
+  # 로그 포맷에 사용할 시간 형식을 지정한다.     
+  JkLogStampFormat "[%y %m %d %H:%M:%S]"
+</IfModule>
+
+$ vi /home/apache/apache2/conf/workers.properties
+
+worker.list=tomcat
+worker.tomcat.port=8009 
+worker.tomcat.host=localhost 
+worker.tomcat.type=ajp13 
+worker.tomcat.lbfactor=1
+
+$ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
+
+<VirtualHost *:80>     
+  ServerName localhost   
+  JkMount /* tomcat
+</VirtualHost>
