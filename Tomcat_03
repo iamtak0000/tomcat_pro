@@ -5,3 +5,18 @@ $ /home/tomcat/00.single/apache-tomcat-8.5.35/bin/startup.sh
 $ ps -ef | grep java
 ** 프로세스를 확인한다.
 ## http://ip:8080
+
+
+## Tomcat를 다운한다.
+
+$ /home/tomcat/00.single/apache-tomcat-8.5.35/bin/shutdown.sh
+
+## 자바 옵션을 추가한다
+$ vi /home/tomcat/00.single/apache-tomcat-8.5.35/bin/jstart.sh
+#!/bin/sh
+
+#!usr/bin/env hash
+## Compiler
+export JAVA_OPTS="-XX:+TieredCompilation"
+
+
