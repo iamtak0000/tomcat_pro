@@ -13,6 +13,7 @@ $ /home/tomcat/00.single/apache-tomcat-8.5.35/bin/shutdown.sh
 
 ## 자바 옵션을 추가한다
 $ vi /home/tomcat/00.single/apache-tomcat-8.5.35/bin/jstart.sh
+--------------------------------------------------------------
 #!/bin/sh
 
 #!usr/bin/env hash
@@ -24,6 +25,8 @@ export JAVA_OPTS="$JAVA_OPTS -Xmx1024m -Xms1024"
 
 ## Collector Default : Parallel Garbage Collector
 
+./startup.sh
+--------------------------------------------------------------
 
 $ chmod +x jstart.sh
 $ ./jstart.sh
