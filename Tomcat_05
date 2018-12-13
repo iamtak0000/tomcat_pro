@@ -43,3 +43,41 @@ $ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
   ServerName localhost   
   JkMount /* tomcat
 </VirtualHost>
+
+## mod_jk 로드밸런싱
+
+$ vi /home/apache/apache2/conf/workers.lb.properties
+=====================================================
+worker.list=tomcat1, tomcat2, trust_loadballance
+
+worker.list=tomcat1
+worker.tomcat1.port=8009 
+worker.tomcat1.host=localhost 
+worker.tomcat1.type=ajp13 
+worker.tomcat1.lbfactor=1
+
+worker.list=tomcat2
+worker.tomcat2.port=18009 
+worker.tomcat2.host=localhost 
+worker.tomcat2.type=ajp13 
+worker.tomcat2.lbfactor=1
+
+worker.trust_loadballance.type=lbworker.trust_loadballance.balanced_workers=tomcat1,tomcat2
+=====================================================
+
+$ vi /home/apache/apache2/conf/httpd.conf
+JkWorkersFile conf/workers.lb.properties 
+
+## 톰캣 수정(server.xml)
+
+tomcat1
+<!-- Define an AJP 1.3 Connector on port 8009 -->
+<Connector port="8109" protocol="AJP/1.3" redirectPort="8443" />
+<Engine jvmRoute="tomcat1" name="Catalina" defaultHost="localhost">
+
+
+tomcat2
+<!-- Define an AJP 1.3 Connector on port 8009 -->
+<Connector port="8209" protocol="AJP/1.3" redirectPort="8443" />
+<Engine jvmRoute="tomcat2" name="Catalina" defaultHost="localhost">
+
