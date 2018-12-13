@@ -1,0 +1,7 @@
+## Tomcat를 다운로드 받는다.
+
+$ wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+$ mkdir 00.single
+$ mv apache-tomcat-8.5.35.tar.gz ./00.single
+$ cd 00.single
+$ tar zxvf apache-tomcat-8.5.35.tar.gz
