@@ -24,7 +24,7 @@ $ curl http://172.20.10.11/
 $ vi /home/apache/apache2/conf/extra/httpd-vhosts.conf
 
 <VirtualHost *:80> 
-  <Proxy balancer://mycluster> 
+  <Proxy balancer://mycluster/> 
      BalancerMember http://127.0.0.1:8080 
      BalancerMember http://127.0.0.1:8081 
   </Proxy>
