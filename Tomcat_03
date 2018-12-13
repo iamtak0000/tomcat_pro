@@ -1,6 +1,6 @@
 ## Tomcat를 기동한다
 
-$ /home/tomcat/00.single/apache-tomcat-8.5.35/bin/startip.sh
+$ /home/tomcat/00.single/apache-tomcat-8.5.35/bin/startp.sh
 
 $ ps -ef | grep java
 ** 프로세스를 확인한다.
