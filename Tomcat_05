@@ -4,7 +4,7 @@
 $ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.46-src.tar.gz
 $ tar -xvzf tomcat-connectors-1.2.46-src.tar.gz
 $ cd tomcat-connectors-1.2.46-src/native
-$ ./configure --with-apxs=/home/apache/apache24/bin/apxs
+$ ./configure --with-apxs=/home/apache/apache2/bin/apxs
 $ make && make install
 
 ## 모듈 확인
