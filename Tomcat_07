@@ -30,7 +30,7 @@
 
 </Context>
 
-## 각 WEA의 web.xml
+## 각 WEA의 web.xml (여기서는 test라는 디렉토리를 /webapps/test/WEB-INF)
 <web-app>
   <resource-ref>
      <description>connection</description>
