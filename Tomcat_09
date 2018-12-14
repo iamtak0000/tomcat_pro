@@ -6,4 +6,4 @@ java -Xms100m -Xmx100m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=OOM.hpro
 
 으로 실행을 해주시면 OOM.hprof 파일이 생깁니다.
 
-이 파일을 로컬로 옮겨서 JAVA VisualVM으로 열어서 어떤 파일이 문제인지 확인해 주세요(C:\Program Files\Java 경로 ).
+이 파일을 로컬로 옮겨서 JAVA VisualVM으로 열어서 어떤 파일이 문제인지 확인해 주세요(C:\Program Files\Java\java8 이상\jvisualvm.exe경로 ) JDK 밑.
