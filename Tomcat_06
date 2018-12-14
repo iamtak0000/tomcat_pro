@@ -1,0 +1,26 @@
+이번 시간에는 Tomcat과 DB를 연결하는 테스트를 진행하겠습니다.
+
+Tomcat은 Java 기반이기 때문에 JDBC를 이용하여 연결을 합니다. 
+이 과정에서 보통 오라클과 같은 DBMS를 사용하지만 이 과정에서는 H2를 사용하도록 하겠습니다.
+
+H2는 Java기반에 라이트한 DBMS로, 로컬디비로 사용하고 있으면 앞으로도 의미가 있을 DBMS여서 사용하도록 좋을 것 같습니다.
+
+자바이기 때문에 jar 기반으로 되어 있습니다(여기서는 h2-1.4.197.jar를 사용).
+서버 실행은 
+   java -cp "h2-1.4.197.jar" org.h2.tools.Server -web -webAllowOthers -tcpAllowOthers -tcp
+
+으로 
+
+http://ip:8082 로 확인이 가능합니다.
+
+여기까지 완료 되었다면, 이제는 톰캣에서 실제 기동할 수 있도록 하겠습니다.
+
+톰캣에서 해당 DB를 사용하기 위해서는 크게
+
+   1. 라이브러리 반영. (CATALINA_HOME/lib)에 h2-1.4.197.jar를 추가
+   2. Datasource 설정
+   3. Code 개발
+
+해야 합니다.
+
+2번 Datasource 설정은 페이지에서 진행을 하겠습니다.
