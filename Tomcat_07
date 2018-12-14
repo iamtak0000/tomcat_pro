@@ -2,7 +2,7 @@
 
 1. Server.xml
 2. Context.xml
-3. 각 WEA의 web.xml
+3. 각 WAR의 web.xml
 
 ## Server.xml
 <Server>
