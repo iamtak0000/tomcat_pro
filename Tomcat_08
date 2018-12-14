@@ -17,3 +17,15 @@ $ jps -v or ps -ef | grep java
 
 $ jstack pid or kill -3  
 
+## 컴파일
+$ javac BlockingProsumer.java
+
+## 실행
+$ java BlockingProsumer
+
+## 확인 : 다른 창으로
+$ jps -v or ps -ef | grep java
+
+$ jstack pid or kill -3 
+
+** java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442) 처럼 톰캣과 같은 현상을 볼 수 있다
