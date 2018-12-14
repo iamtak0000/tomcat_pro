@@ -1,0 +1,9 @@
+이번 시간에는 dump를 발생시켜 보겠습니다.
+
+먼저 아래 OooooomTest.java 파일을 받아서 컴파일을 해주시고, 
+
+java -Xms100m -Xmx100m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=OOM.hprof OooooomTest
+
+으로 실행을 해주시면 OOM.hprof 파일이 생깁니다.
+
+이 파일을 로컬로 옮겨서 JAVA VisualVM으로 열어서 어떤 파일이 문제인지 확인해 주세요.
