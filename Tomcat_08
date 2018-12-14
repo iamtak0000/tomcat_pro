@@ -3,3 +3,17 @@
 일단 스레드의 기본은 Runnable, Blocked, Waiting 입니다. 다른 것들도 있지만, 여기서 알아야 할 필요가 있는 것은 이것들 입니다.
 
 우리는 여기서 간단한 자바 소스를 실행해서 스레드덤프를 확인을 해보겠습니다.
+
+TestThread.java, BlockingProsumer.java
+
+## 컴파일
+$ javac TestThread.java
+
+## 실행
+$ java TestThread
+
+## 확인 : 다른 창으로
+$ jps -v or ps -ef | grep java
+
+$ jstack pid or kill -3  
+
